@@ -1,8 +1,24 @@
-# Getting Started with Create React App
+# Jammming react app
+
+A React web application called Jammming that uses the Spotify API to build a website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.
+
+## Prerequisites
+
+- **Node.js** (Recommended version: v21.6.1)
+- **npm** (Recommended version: 10.2.4)
+
+### Installation
+
+1. Clone the repository:
+   bash
+   git clone https://github.com/your-username/jamming-react-app.git
+   cd jamming-react-app
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
