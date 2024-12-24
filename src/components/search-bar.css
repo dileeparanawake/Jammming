@@ -1,0 +1,9 @@
+#searchBar {
+  display: flex;
+  gap: 8px;
+}
+
+#searchBar #searchInput {
+  border-radius: 12px;
+  padding: 4px;
+}
