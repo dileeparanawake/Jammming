@@ -8,6 +8,7 @@ function SongItem({
   album,
   imgURL,
   addedToPlaylist,
+  view,
 }) {
   return (
     <li addedToPlaylist={addedToPlaylist} elementId={elementId}>

@@ -8,6 +8,7 @@ import TogglePlaylistSearch from "./TogglePlaylistSearch";
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlist, setPlaylist] = useState([]);
+  const [songs, setSongs] = useState([]);
   const [view, setView] = useState("searchView");
 
   function toggleView() {
@@ -28,11 +29,11 @@ function App() {
           Search your Spotify library, create a custom playlist, then save it to
           your account.
         </p>
-        <SearchBarContainer />
+        <SearchBarContainer view={view} />
+        <TogglePlaylistSearch view={view} toggleView={toggleView} />
         <form action="">
-          <TogglePlaylistSearch view={view} toggleView={toggleView} />
-          <PlaylistHeader />
-          <SongsContainer />
+          <PlaylistHeader view={view} />
+          <SongsContainer view={view} />
         </form>
       </div>
     </div>
