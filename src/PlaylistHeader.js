@@ -6,7 +6,7 @@ function PlaylistHeader() {
   return (
     <div>
       <NamePlaylist />
-      <Button buttonText="Save to Spotify" />
+      <Button buttonText="Save to Spotify" type="submit" />
     </div>
   );
 }

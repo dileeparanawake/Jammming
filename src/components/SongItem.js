@@ -1,9 +1,16 @@
 import React from "react";
 import Button from "./Button";
 
-function SongItem({ key, title, artist, album, imgURL, addedToPlaylist }) {
+function SongItem({
+  elementId,
+  title,
+  artist,
+  album,
+  imgURL,
+  addedToPlaylist,
+}) {
   return (
-    <li key={key} addedToPlaylist={addedToPlaylist}>
+    <li addedToPlaylist={addedToPlaylist} elementId={elementId}>
       <div>
         <img src={imgURL} alt="album art" />
         <p>{title}</p>
@@ -13,7 +20,10 @@ function SongItem({ key, title, artist, album, imgURL, addedToPlaylist }) {
         <p>{album}</p>
       </div>
       <div>
-        <Button buttonText={addedToPlaylist ? "Remove" : "Add"}></Button>
+        <Button
+          buttonText={addedToPlaylist ? "Remove" : "Add"}
+          type="button"
+        ></Button>
       </div>
     </li>
   );

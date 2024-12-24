@@ -9,8 +9,9 @@ function NamePlaylist() {
         name="playlistName"
         type="text"
         placeholder="Name your playlist"
+        value=""
       />
-      <Button buttonText="save" />
+      <Button buttonText="Rename" type="button" />
     </div>
   );
 }

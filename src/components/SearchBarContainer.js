@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
+import "../App.css";
 
-function SearchBarContainer() {
+function SearchBarContainer({ view }) {
   return <SearchBar />;
 }
 
