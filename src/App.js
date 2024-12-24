@@ -25,10 +25,7 @@ function App() {
     <div className="App">
       <div className="content">
         <h1>Jammming for Spotify</h1>
-        <p>
-          Search your Spotify library, create a custom playlist, then save it to
-          your account.
-        </p>
+        <p>Make custom playlists for Spotify.</p>
         <SearchBarContainer view={view} />
         <TogglePlaylistSearch view={view} toggleView={toggleView} />
         <form action="">

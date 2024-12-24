@@ -7,6 +7,7 @@ function SearchBarContainer({ view }) {
   const [searchInput, setSearchInput] = useState("");
 
   function handleChange(e) {
+    alert("x");
     setSearchInput(e.target.value);
   }
   function handleSubmit(e) {
@@ -18,12 +19,12 @@ function SearchBarContainer({ view }) {
     <div
       style={{
         visibility: isSearchViewActive(view) ? "visible" : "hidden",
-        height: isSearchViewActive(view) ? "100%" : "0px",
+        height: isSearchViewActive(view) ? "200%" : "0px",
       }}
     >
       <SearchBar
         handleChange={handleChange}
-        onSubmit={handleSubmit}
+        handleSubmit={handleSubmit}
         searchInput={searchInput}
       />
     </div>

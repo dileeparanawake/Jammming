@@ -9,6 +9,10 @@ function PlaylistHeader({ view }) {
       style={{
         visibility: isSearchViewActive(view) ? "hidden" : "visible",
         height: isSearchViewActive(view) ? "0px" : "100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <NamePlaylist />

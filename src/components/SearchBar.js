@@ -2,10 +2,9 @@ import React from "react";
 
 import Button from "./Button";
 
-function SearchBar({ onSubmit, handleChange, searchInput }) {
+function SearchBar({ handleChange, searchInput, handleSubmit }) {
   return (
-    <form id="searchBar" onSubmit={onSubmit} aria-label="Search songs">
-      <label htmlFor="searchInput">Search by song title</label>
+    <form id="searchBar" onSubmit={handleSubmit} aria-label="Search songs">
       <input
         id="searchInput"
         type="text"
@@ -14,7 +13,7 @@ function SearchBar({ onSubmit, handleChange, searchInput }) {
         value={searchInput}
         onChange={handleChange}
       />
-      <Button buttonText="search"></Button>
+      <Button buttonText="search" type="submit"></Button>
     </form>
   );
 }

@@ -56,7 +56,15 @@ function SongsContainer({ view }) {
     );
   });
 
-  return <ul>{songList}</ul>;
+  return (
+    <ul
+      style={{
+        listStyle: "none",
+      }}
+    >
+      {songList}
+    </ul>
+  );
 }
 
 export default SongsContainer;

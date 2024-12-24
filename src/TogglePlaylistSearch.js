@@ -1,26 +1,31 @@
 import React from "react";
 import Button from "./components/Button";
+import isSearchViewActive from "./utilities";
 
 function TogglePlaylistSearch({ view, toggleView }) {
   return (
     <div>
       <h2>
-        {view === "searchView"
+        {isSearchViewActive(view)
           ? "Search Results..."
           : "Songs in your playlist..."}
       </h2>
       <p>
-        {view === "searchView"
+        {isSearchViewActive(view)
           ? "Add songs to your playlist..."
-          : "Songs in your playlist..."}
+          : "Edit your playlist..."}
       </p>
-      <Button
-        onClick={toggleView}
-        buttonText={
-          view === "searchView" ? "View playlist..." : "View search results..."
-        }
-        type="button"
-      />
+      <div>
+        <Button
+          onClick={toggleView}
+          buttonText={
+            view === "searchView"
+              ? "View playlist..."
+              : "View search results..."
+          }
+          type="button"
+        />
+      </div>
     </div>
   );
 }
