@@ -1,5 +1,6 @@
 import React from "react";
-import "./search-bar.css";
+
+import Button from "./Button";
 
 function SearchBar({ handleSubmit, searchTerm, handleChange }) {
   return (
@@ -13,7 +14,7 @@ function SearchBar({ handleSubmit, searchTerm, handleChange }) {
         value={searchTerm}
         onChange={handleChange}
       />
-      <button type="submit">Search</button>
+      <Button></Button>
     </form>
   );
 }
