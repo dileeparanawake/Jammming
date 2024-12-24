@@ -3,6 +3,7 @@ import React from "react";
 import SearchBarContainer from "./components/SearchBarContainer";
 import SongsContainer from "./components/SongsContainer";
 import Button from "./components/Button";
+import NamePlaylist from "./NamePlaylist";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         </p>
         <SearchBarContainer />
         <form action="">
+          <h2>Search Results...</h2>
+          <NamePlaylist />
           <SongsContainer />
           <Button buttonText="Save to Spotify" />
         </form>

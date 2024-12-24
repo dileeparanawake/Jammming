@@ -14,7 +14,7 @@ function SearchBar({ handleSubmit, searchTerm, handleChange }) {
         value={searchTerm}
         onChange={handleChange}
       />
-      <Button></Button>
+      <Button buttonText="search"></Button>
     </form>
   );
 }
