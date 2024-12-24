@@ -4,6 +4,7 @@ import SearchBarContainer from "./components/SearchBarContainer";
 import SongsContainer from "./components/SongsContainer";
 import Button from "./components/Button";
 import NamePlaylist from "./NamePlaylist";
+import TogglePlaylistSearch from "./TogglePlaylistSearch";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </p>
         <SearchBarContainer />
         <form action="">
-          <h2>Search Results...</h2>
+          <TogglePlaylistSearch />
           <NamePlaylist />
           <SongsContainer />
           <Button buttonText="Save to Spotify" />
