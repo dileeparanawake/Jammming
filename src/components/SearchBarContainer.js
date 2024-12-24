@@ -6,11 +6,20 @@ function SearchBarContainer({ view }) {
   const [searchInput, setSearchInput] = useState("");
 
   function handleChange(e) {
-    setSearchInput((searchInput) => {
-      return searchInput + e.target.value;
-    });
+    setSearchInput(e.target.value);
   }
-  return <SearchBar handleChange={handleChange} />;
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("search submitted - replace with api push! query=" + searchInput);
+    setSearchInput("");
+  }
+  return (
+    <SearchBar
+      handleChange={handleChange}
+      onSubmit={handleSubmit}
+      searchInput={searchInput}
+    />
+  );
 }
 
 export default SearchBarContainer;
