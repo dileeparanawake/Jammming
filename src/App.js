@@ -2,8 +2,7 @@ import "./App.css";
 import React from "react";
 import SearchBarContainer from "./components/SearchBarContainer";
 import SongsContainer from "./components/SongsContainer";
-import Button from "./components/Button";
-import NamePlaylist from "./NamePlaylist";
+import PlaylistHeader from "./PlaylistHeader";
 import TogglePlaylistSearch from "./TogglePlaylistSearch";
 
 function App() {
@@ -18,9 +17,8 @@ function App() {
         <SearchBarContainer />
         <form action="">
           <TogglePlaylistSearch />
-          <NamePlaylist />
+          <PlaylistHeader />
           <SongsContainer />
-          <Button buttonText="Save to Spotify" />
         </form>
       </div>
     </div>
