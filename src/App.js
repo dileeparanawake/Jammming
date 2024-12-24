@@ -19,6 +19,7 @@ function App() {
       }
     });
   }
+
   return (
     <div className="App">
       <div className="content">
@@ -27,7 +28,7 @@ function App() {
           Search your Spotify library, create a custom playlist, then save it to
           your account.
         </p>
-        <SearchBarContainer style={{ display: "none" }} />
+        <SearchBarContainer />
         <form action="">
           <TogglePlaylistSearch view={view} toggleView={toggleView} />
           <PlaylistHeader />
