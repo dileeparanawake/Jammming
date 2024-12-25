@@ -1,0 +1,28 @@
+.button_standard {
+  background-color: #1f3b3e;
+  color: #f9f9f7;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  border-color: #647678;
+  border-width: 1px;
+  margin: 10px;
+}
+
+.button_standard:hover {
+  background-color: #2b4d51;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  border-color: #7e8f91;
+  border-width: 1px;
+  margin: 10px;
+}
+.button_standard:active {
+  background-color: #1d2324;
+  color: #bfbcb9;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  border-color: #434f51;
+  border-width: 1px;
+  margin: 10px;
+}
