@@ -8,6 +8,13 @@
   margin: 10px;
 }
 
+.button_standard p {
+  font-size: medium;
+  font-weight: bold;
+  padding: 0;
+  margin: 5px 10px;
+}
+
 .button_standard:hover {
   background-color: #2b4d51;
   color: #ffffff;

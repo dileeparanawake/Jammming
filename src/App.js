@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import PrototypeElements from "./utilities/PrototypeElements";
+import PrototypeElements from "./utilities/PrototypeElements/PrototypeElements";
 import SearchBarContainer from "./components/SearchBar/SearchBarContainer";
 import SongsContainer from "./components/SongsContainer";
 import PlaylistHeader from "./PlaylistHeader";
