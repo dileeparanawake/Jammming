@@ -1,0 +1,48 @@
+.search-pill-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #120512;
+  border: #463446 solid 1px;
+  border-radius: 50px;
+  overflow: hidden;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.search-input {
+  flex: 1;
+  background-color: transparent;
+  padding: 15px 10px 15px 20px;
+  font-weight: 500;
+  color: #fffdff;
+  font-size: medium;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+
+.search-input::placeholder {
+  color: #4d3b4d;
+  font-size: medium;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.search-button {
+  flex: 1;
+  color: #fffdff;
+  background-color: transparent;
+  border-radius: 0 50px 50px 0;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.search-button:hover {
+  color: #fffdff;
+  background-color: #1b0c1b;
+  border: none;
+  outline: none;
+}

@@ -1,11 +1,12 @@
 .button_standard {
-  background-color: #1f3b3e;
-  color: #f9f9f7;
+  background-color: #120512;
+  color: #fffdff;
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
-  border-color: #647678;
-  border-width: 1px;
+  border: #392a39 solid 1px;
   margin: 10px;
+  transform: none; /* Disable press effect */
+  box-shadow: none;
 }
 
 .button_standard p {
@@ -16,20 +17,22 @@
 }
 
 .button_standard:hover {
-  background-color: #2b4d51;
+  background-color: #1b0c1b;
   color: #ffffff;
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
-  border-color: #7e8f91;
-  border-width: 1px;
+  border: #cab6ca solid 1px;
   margin: 10px;
+  transform: none; /* Disable press effect */
+  box-shadow: none;
 }
 .button_standard:active {
-  background-color: #1d2324;
-  color: #bfbcb9;
+  background-color: #332a33;
+  color: #ffffff;
   border-radius: 20px;
   padding: 5px 10px 5px 10px;
-  border-color: #434f51;
-  border-width: 1px;
+  border: #e9e1e9 solid 1px;
   margin: 10px;
+  transform: none; /* Disable press effect */
+  box-shadow: inset 0 0 0 1px #e9e1e9;
 }
