@@ -1,48 +1,67 @@
 .search-pill-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #120512;
-  border: #463446 solid 1px;
+  border: #463446 solid 2px;
   border-radius: 50px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  width: 100%;
   max-width: 400px;
+  /* margin: 10px; */
   box-sizing: border-box;
 }
 
 .search-input {
-  flex: 1;
   background-color: transparent;
-  padding: 15px 10px 15px 20px;
+  padding: 0.5em 0 0.5em 1.5em;
+  border-radius: 50px 0px 0px 50px;
   font-weight: 500;
   color: #fffdff;
   font-size: medium;
-  height: 100%;
   outline: none;
   border: none;
+  flex-grow: 0.8;
+  flex-shrink: 1;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: 2px solid #5f495f;
 }
 
 .search-input::placeholder {
-  color: #4d3b4d;
+  color: #463446;
   font-size: medium;
   font-weight: 400;
   opacity: 1;
 }
 
 .search-button {
-  flex: 1;
   color: #fffdff;
   background-color: transparent;
   border-radius: 0 50px 50px 0;
-  padding: 15px 20px;
+  padding: 0.5em 1em;
   border: none;
   outline: none;
   font-size: medium;
   font-weight: 500;
+  max-width: 100px;
+  flex-grow: 0.2;
+  flex-shrink: 1;
+  box-sizing: border-box;
 }
 
 .search-button:hover {
   color: #fffdff;
-  background-color: #1b0c1b;
+  background-color: #210f21;
+  border: none;
+  outline: none;
+}
+
+.search-button:active {
+  color: #ffffff;
+  background-color: #332a33;
   border: none;
   outline: none;
 }

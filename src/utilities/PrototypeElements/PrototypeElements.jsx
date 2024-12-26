@@ -12,9 +12,8 @@ function PrototypeElements(props) {
         <AppColors />
         <ButtonStandard />
       </div>
-      <div>
-        <SearchPillWrapper></SearchPillWrapper>
-      </div>
+
+      <SearchPillWrapper></SearchPillWrapper>
     </div>
   );
 }

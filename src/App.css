@@ -2,7 +2,6 @@
   display: flex;
   text-align: center;
   justify-content: center;
-  height: 100vh; /* Ensure it takes the full viewport height */
 }
 
 .hidden {

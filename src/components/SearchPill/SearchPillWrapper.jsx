@@ -5,12 +5,10 @@ import SearchButton from "./SearchButton";
 
 function SearchPillWrapper(props) {
   return (
-    <div className="search-pill-wrapper">
-      <form name="searchResult">
-        <SearchInput></SearchInput>
-        <SearchButton></SearchButton>
-      </form>
-    </div>
+    <form name="searchResult" className="search-pill-wrapper">
+      <SearchInput></SearchInput>
+      <SearchButton></SearchButton>
+    </form>
   );
 }
 
