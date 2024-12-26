@@ -1,6 +1,6 @@
 import React from "react";
-
-import Button from "./Button";
+import "./search-bar.css";
+import Button from "../Button";
 
 function SearchBar({ handleChange, searchInput, handleSubmit }) {
   return (

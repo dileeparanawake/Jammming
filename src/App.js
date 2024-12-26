@@ -1,9 +1,11 @@
 import "./App.css";
 import React, { useState } from "react";
-import SearchBarContainer from "./components/SearchBarContainer";
+import PrototypeElements from "./utilities/PrototypeElements";
+import SearchBarContainer from "./components/SearchBar/SearchBarContainer";
 import SongsContainer from "./components/SongsContainer";
 import PlaylistHeader from "./PlaylistHeader";
 import TogglePlaylistSearch from "./TogglePlaylistSearch";
+import ButtonStandard from "./components/ButtonStandard/ButtonStandard";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -21,9 +23,24 @@ function App() {
     });
   }
 
+  function isHidden(classname, hide) {
+    let classString = "";
+    if (hide === true) {
+      classString = classname + " " + "hidden";
+    } else {
+      classString = classname;
+    }
+    console.log({ className: classString });
+    return classString;
+  }
   return (
     <div className="App">
       <div className="content">
+        <PrototypeElements
+          className="prototype-elements"
+          hide={false}
+          isHidden={isHidden}
+        ></PrototypeElements>
         <h1>Jammming for Spotify</h1>
         <p>Make custom playlists for Spotify.</p>
         <SearchBarContainer view={view} />

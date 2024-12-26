@@ -1,4 +1,4 @@
-import "./button_standard.css";
+import "./button-standard.css";
 
 function ButtonStandard(props) {
   return (

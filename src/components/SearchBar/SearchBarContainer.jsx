@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
-import "../App.css";
-import isSearchViewActive from "../utilities";
+import "../../App.css";
+import isSearchViewActive from "../../utilities";
 
 function SearchBarContainer({ view }) {
   const [searchInput, setSearchInput] = useState("");
 
   function handleChange(e) {
-    alert("x");
     setSearchInput(e.target.value);
   }
   function handleSubmit(e) {
