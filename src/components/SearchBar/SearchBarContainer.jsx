@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import "../../App.css";
 import isSearchViewActive from "../../utilities";
+import { search } from "../../api/spotify";
 
 function SearchBarContainer({ view }) {
   const [searchInput, setSearchInput] = useState("");
@@ -9,9 +10,14 @@ function SearchBarContainer({ view }) {
   function handleChange(e) {
     setSearchInput(e.target.value);
   }
-  function handleSubmit(e) {
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    alert("search submitted - replace with api push! query=" + searchInput);
+    console.log(
+      "search submitted - replace with api push! query=" + searchInput
+    );
+    const searchResults = await search(searchInput, "track");
+    console.log(searchResults);
     setSearchInput("");
   }
   return (
