@@ -2,6 +2,7 @@ import React from "react";
 import "./prototype-elements.css";
 import ButtonStandard from "../../components/ButtonStandard/ButtonStandard";
 import SearchPillWrapper from "../../components/SearchPill/SearchPillWrapper";
+import Tmvp from "../../tmvp/tmvp";
 
 import AppColors from "../AppColors/AppColors";
 function PrototypeElements(props) {
@@ -11,9 +12,9 @@ function PrototypeElements(props) {
       <div className="hidden">
         <AppColors />
         <ButtonStandard />
+        <SearchPillWrapper></SearchPillWrapper>
       </div>
-
-      <SearchPillWrapper></SearchPillWrapper>
+      <Tmvp></Tmvp>
     </div>
   );
 }
