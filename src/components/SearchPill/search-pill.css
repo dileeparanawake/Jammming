@@ -1,3 +1,8 @@
+.search-pill-wrapper.hidden {
+  display: none;
+  transition: 400ms;
+}
+
 .search-pill-wrapper {
   display: flex;
   align-items: center;
@@ -26,8 +31,12 @@
   box-sizing: border-box;
 }
 
+.search-input:hover {
+  outline: 2px solid #cab6ca;
+}
+
 .search-input:focus {
-  outline: 2px solid #5f495f;
+  outline: 2px solid #cab6ca;
 }
 
 .search-input::placeholder {
@@ -56,12 +65,13 @@
   color: #fffdff;
   background-color: #210f21;
   border: none;
-  outline: none;
+  outline: 2px solid #cab6ca;
 }
 
 .search-button:active {
   color: #ffffff;
   background-color: #332a33;
   border: none;
-  outline: none;
+  outline: 2px solid #cab6ca;
+  box-shadow: inset 0 0 0 1px #e9e1e9;
 }

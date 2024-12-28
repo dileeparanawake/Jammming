@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import "../../App.css";
-import isSearchViewActive from "../../utilities";
+import { isSearchViewActive } from "../../utilities/utilities";
 import { search } from "../../api/spotify";
 
 function SearchBarContainer({ view }) {

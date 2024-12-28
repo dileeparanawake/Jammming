@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "./components/Button";
-import isSearchViewActive from "./utilities";
+import Button from "../Button";
+import { isSearchViewActive } from "../../utilities/utilities";
+import ButtonStandard from "../ButtonStandard/ButtonStandard";
 
 function TogglePlaylistSearch({ view, toggleView }) {
   return (
@@ -16,7 +17,7 @@ function TogglePlaylistSearch({ view, toggleView }) {
           : "Edit your playlist..."}
       </p>
       <div>
-        <Button
+        <ButtonStandard
           onClick={toggleView}
           buttonText={
             view === "searchView"

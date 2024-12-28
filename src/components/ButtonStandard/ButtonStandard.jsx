@@ -2,7 +2,11 @@ import "./button-standard.css";
 
 function ButtonStandard(props) {
   return (
-    <button className={props.className || "button_standard"}>
+    <button
+      className={props.className || "button_standard"}
+      onClick={props.onClick}
+      type={props.type ? props.type : "button"}
+    >
       <p>{props.buttonText || "Default click"}</p>
     </button>
   );

@@ -2,8 +2,16 @@
   display: flex;
   text-align: center;
   justify-content: center;
+  max-width: 600px;
+  flex-flow: column;
+  /* width: 800px; */
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
 .hidden {
   display: none;
 }

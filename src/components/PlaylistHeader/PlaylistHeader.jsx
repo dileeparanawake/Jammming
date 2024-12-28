@@ -1,7 +1,7 @@
 import React from "react";
 import NamePlaylist from "./NamePlaylist";
-import Button from "./components/Button";
-import isSearchViewActive from "./utilities";
+import Button from "../Button";
+import { isSearchViewActive } from "../../utilities/utilities";
 
 function PlaylistHeader({ view }) {
   return (

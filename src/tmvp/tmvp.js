@@ -1,49 +1,64 @@
 import React, { useState } from "react";
 import { SPOTIFY_ACCESS_TOKEN } from "../api/secrets";
 
+import { getSearchResults } from "../api/getSearchResults";
+
 const SPOTIFY_API_URL = "https://api.spotify.com/v1";
 
 function Tmvp() {
   const [searchResult, setSearchResult] = useState({});
   const [playlistId, setPlaylistId] = useState(null);
 
+  let query = "Only love";
   // reset data
 
   function reset() {
     setSearchResult({});
   }
 
-  // test submit search request & get response
-  async function testSubmitSearchQuery() {
-    const params = new URLSearchParams({
-      q: "Yellow Submarine",
-      type: "track",
-    });
-
-    const SEARCH_URL = "/search?";
-    const searchString = params.toString();
-
-    // console.log(searchString);
-
-    const url = `${SPOTIFY_API_URL}${SEARCH_URL}${searchString}`;
-
-    const response = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${SPOTIFY_ACCESS_TOKEN}`,
-      },
-    });
-
-    if (response.ok) {
-      setSearchResult({});
-      const data = await response.json();
-      console.log(data);
-      setSearchResult(data);
-    } else {
-      console.error(response.status);
-      console.error(response.statusText);
-      throw new Error("Request failed!");
-    }
+  function handleSubmitSearch(event) {
+    // for searchbar form
+    event.preventDefault();
+    setSearchResult({});
+    getSearchResults(query, setSearchResult); // query to be obtained from form result.
   }
+  // test submit search request & get response
+
+  // getSearchResults(query, setSearchResult);
+  // async function getSearchResults() {
+  //   const params = new URLSearchParams({
+  //     q: "Only love",
+  //     type: "track",
+  //   });
+
+  //   const SEARCH_URL = "/search?"; //path
+  //   const searchString = params.toString();
+
+  //   // console.log(searchString);
+
+  //   const url = `${SPOTIFY_API_URL}${SEARCH_URL}${searchString}`;
+
+  //   const response = await fetch(url, {
+  //     headers: {
+  //       Authorization: `Bearer ${SPOTIFY_ACCESS_TOKEN}`,
+  //     },
+  //   });
+
+  //   if (response.ok) {
+  //     console.log(response);
+  //     setSearchResult({});
+  //     const data = await response.json();
+  //     console.log(typeof data);
+  //     console.dir(data);
+  //     setSearchResult(data);
+  //   } else {
+  //     console.error(response.status);
+  //     console.error(response.statusText);
+  //     const message = await response.text();
+  //     console.error(message);
+  //     throw new Error("Request failed!");
+  //   }
+  // }
 
   // test get track from response
 
@@ -101,6 +116,8 @@ function Tmvp() {
     } else {
       console.log(response.status);
       console.log(response.statusText);
+      const errorJson = await response.json();
+      console.error(errorJson.error.message);
       throw new Error("Playlist creation failed!");
     }
   }
@@ -108,7 +125,7 @@ function Tmvp() {
   return (
     <div>
       <p>TMVP</p>
-      <button onClick={testSubmitSearchQuery}>Submit Search</button>
+      <button onClick={handleSubmitSearch}>Submit Search</button>
       <button onClick={reset}>Reset Search</button>
       <div>{testRenderResults()}</div>
       <button onClick={createPlaylist}>Make Playlist Test Playlist</button>

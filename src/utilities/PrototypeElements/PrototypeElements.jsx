@@ -13,8 +13,8 @@ function PrototypeElements(props) {
         <AppColors />
         <ButtonStandard />
         <SearchPillWrapper></SearchPillWrapper>
+        <Tmvp></Tmvp>
       </div>
-      <Tmvp></Tmvp>
     </div>
   );
 }

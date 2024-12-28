@@ -1,6 +1,6 @@
 import React from "react";
 import SongItem from "./SongItem";
-import isSearchViewActive from "../utilities";
+import { isSearchViewActive } from "../../utilities/utilities";
 
 let elementId = 0;
 

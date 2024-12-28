@@ -1,11 +1,10 @@
 import "./App.css";
 import React, { useState } from "react";
 import PrototypeElements from "./utilities/PrototypeElements/PrototypeElements";
-import SearchBarContainer from "./components/SearchBar/SearchBarContainer";
-import SongsContainer from "./components/SongsContainer";
-import PlaylistHeader from "./PlaylistHeader";
-import TogglePlaylistSearch from "./TogglePlaylistSearch";
-import ButtonStandard from "./components/ButtonStandard/ButtonStandard";
+import PlaylistHeader from "./components/PlaylistHeader/PlaylistHeader";
+import SongsContainer from "./components/SongsContainer/SongsContainer";
+import TogglePlaylistSearch from "./components/TogglePlaylistSearch/TogglePlaylistSearch";
+import SearchPillWrapper from "./components/SearchPill/SearchPillWrapper";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -35,21 +34,21 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="content">
-        <PrototypeElements
-          className="prototype-elements"
-          hide={false}
-          isHidden={isHidden}
-        ></PrototypeElements>
-        <h1>Jammming for Spotify</h1>
-        <p>Make custom playlists for Spotify.</p>
-        <SearchBarContainer view={view} />
-        <TogglePlaylistSearch view={view} toggleView={toggleView} />
-        <form action="">
-          <PlaylistHeader view={view} />
-          <SongsContainer view={view} />
-        </form>
-      </div>
+      {/* <div className="content"> */}
+      <PrototypeElements
+        className="prototype-elements"
+        hide={true}
+        isHidden={isHidden}
+      ></PrototypeElements>
+      <h1>Jammming for Spotify</h1>
+      <p>Make custom playlists for Spotify.</p>
+      <SearchPillWrapper view={view}></SearchPillWrapper>
+      <TogglePlaylistSearch view={view} toggleView={toggleView} />
+
+      <PlaylistHeader view={view} />
+      <SongsContainer view={view} />
+
+      {/* </div> */}
     </div>
   );
 }
