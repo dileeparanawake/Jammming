@@ -4,29 +4,27 @@ import SearchInput from "./SearchInput";
 import SearchButton from "./SearchButton";
 import { isSearchViewActive } from "../../utilities/utilities";
 import { getSearchResults } from "../../api/getSearchResults";
-
-function SearchPillWrapper({ view }) {
+import { makeNewSongObject } from "../../utilities/makeNewSongObject";
+import { makeNewSongArray } from "../../utilities/makeNewSongArray";
+function SearchPillWrapper({
+  view,
+  songsInPlaylist,
+  setSongsInPlaylist,
+  setSongsInSearch,
+  songsInSearch,
+}) {
   const [searchInput, setSearchInput] = useState("");
 
   function handleChange(e) {
     setSearchInput(e.target.value);
   }
 
-  async function handleSubmit(e, searchInput) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const rawSearchResult = await getSearchResults(searchInput);
-    console.log("Got search result ", rawSearchResult);
     setSearchInput("");
+    setSongsInSearch(makeNewSongArray(rawSearchResult, songsInPlaylist));
   }
-  // async function handleSubmit(e) {
-  //   e.preventDefault();
-  //   console.log(
-  //     "search submitted - replace with api push! query=" + searchInput
-  //   );
-  //   const searchResults = await search(searchInput, "track");
-  //   console.log(searchResults);
-  //   setSearchInput("");
-  // }
 
   return (
     <form

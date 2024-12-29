@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PrototypeElements from "./utilities/PrototypeElements/PrototypeElements";
 import PlaylistHeader from "./components/PlaylistHeader/PlaylistHeader";
 import SongsContainer from "./components/SongsContainer/SongsContainer";
@@ -7,8 +7,8 @@ import TogglePlaylistSearch from "./components/TogglePlaylistSearch/TogglePlayli
 import SearchPillWrapper from "./components/SearchPill/SearchPillWrapper";
 
 function App() {
-  const [searchResults, setSearchResults] = useState([]);
-  const [playlist, setPlaylist] = useState([]);
+  const [songsInSearch, setSongsInSearch] = useState([]);
+  const [songsInPlaylist, setSongsInPlaylist] = useState([]);
   const [songs, setSongs] = useState([]);
   const [view, setView] = useState("searchView");
 
@@ -32,6 +32,11 @@ function App() {
     console.log({ className: classString });
     return classString;
   }
+
+  useEffect(() => {
+    console.log("songs in search updated :", songsInSearch); // display updated songs
+  }, [songsInSearch]);
+
   return (
     <div className="App">
       {/* <div className="content"> */}
@@ -40,13 +45,30 @@ function App() {
         hide={true}
         isHidden={isHidden}
       ></PrototypeElements>
-      <h1>Jammming for Spotify</h1>
-      <p>Make custom playlists for Spotify.</p>
-      <SearchPillWrapper view={view}></SearchPillWrapper>
+      <div className="header">
+        <h1>
+          Ja<span>mmm</span>ing for Spotify
+        </h1>
+        <p>Make custom playlists for Spotify.</p>
+      </div>
+      <SearchPillWrapper
+        view={view}
+        songsInPlaylist={songsInPlaylist}
+        setSongsInPlaylist={setSongsInPlaylist}
+        songsInSearch={songsInSearch}
+        setSongsInSearch={setSongsInSearch}
+      ></SearchPillWrapper>
       <TogglePlaylistSearch view={view} toggleView={toggleView} />
 
       <PlaylistHeader view={view} />
-      <SongsContainer view={view} />
+      <SongsContainer
+        view={view}
+        songsInPlaylist={songsInPlaylist}
+        setSongsInPlaylist={setSongsInPlaylist}
+        songsInSearch={songsInSearch}
+        setSongsInSearch={setSongsInSearch}
+        className={"songs-container main"}
+      />
 
       {/* </div> */}
     </div>

@@ -13,6 +13,8 @@ function PlaylistHeader({ view }) {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        gap: "10px",
+        paddingTop: "15px",
       }}
     >
       <NamePlaylist />
