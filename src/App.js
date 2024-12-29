@@ -9,7 +9,7 @@ import SearchPillWrapper from "./components/SearchPill/SearchPillWrapper";
 function App() {
   const [songsInSearch, setSongsInSearch] = useState([]);
   const [songsInPlaylist, setSongsInPlaylist] = useState([]);
-  const [songs, setSongs] = useState([]);
+  const [saved, setSaved] = useState("");
   const [view, setView] = useState("searchView");
 
   function toggleView() {
@@ -33,6 +33,19 @@ function App() {
     return classString;
   }
 
+  function onClickHandleSave() {
+    setSaved("Saved to Spotify 🎉🎉🎉");
+  }
+
+  useEffect(() => {
+    if (saved) {
+      let timerID = setTimeout(() => {
+        setSaved("");
+        clearTimeout(timerID);
+      }, 4000);
+    }
+  }, [saved]);
+
   useEffect(() => {
     console.log("songs in search updated :", songsInSearch); // display updated songs
   }, [songsInSearch]);
@@ -51,6 +64,7 @@ function App() {
         </h1>
         <p>Make custom playlists for Spotify.</p>
       </div>
+      <h2 className="saved">{saved}</h2>
       <SearchPillWrapper
         view={view}
         songsInPlaylist={songsInPlaylist}
@@ -60,7 +74,7 @@ function App() {
       ></SearchPillWrapper>
       <TogglePlaylistSearch view={view} toggleView={toggleView} />
 
-      <PlaylistHeader view={view} />
+      <PlaylistHeader view={view} onClickHandleSave={onClickHandleSave} />
       <SongsContainer
         view={view}
         songsInPlaylist={songsInPlaylist}

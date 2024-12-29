@@ -65,7 +65,7 @@ function SongsContainer({
       songsInSearch={songsInSearch}
       setSongsInSearch={setSongsInSearch}
     >
-      <p>{view}</p>
+      {/* <p>{view}</p> */}
       {searchSongsDisplayed}
     </ul>
   );

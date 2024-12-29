@@ -5,9 +5,10 @@
 **Features**
 
 - Users can search for songs by song title.
-- You can also include functionality to search by other attributes like artist’s name, genre, etc.
-- Users can see information about each song like title, artist, and album for songs they queried
-- Users can export their custom playlist to their personal Spotify account
+- Users can see information about each song like title, artist, and album for songs they queried.
+- Users can export their custom playlist to their personal Spotify account.
+
+[![Demo](./assets/demo_image.png)](https://youtube.com/shorts/112AMuUWtKA)
 
 ## Prerequisites
 

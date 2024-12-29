@@ -3,7 +3,7 @@ import NamePlaylist from "./NamePlaylist";
 import Button from "../Button";
 import { isSearchViewActive } from "../../utilities/utilities";
 
-function PlaylistHeader({ view }) {
+function PlaylistHeader({ view, onClickHandleSave }) {
   return (
     <div
       style={{
@@ -18,7 +18,11 @@ function PlaylistHeader({ view }) {
       }}
     >
       <NamePlaylist />
-      <Button buttonText="Save to Spotify" type="submit" />
+      <Button
+        buttonText="Save to Spotify"
+        type="submit"
+        onClick={onClickHandleSave}
+      />
     </div>
   );
 }

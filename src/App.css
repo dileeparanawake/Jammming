@@ -1,7 +1,8 @@
 .App {
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   max-width: 800px;
   flex-flow: column;
   /* width: 700px; */
@@ -30,5 +31,10 @@
 
 .header {
   margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
+}
+
+.saved {
+  color: rgb(90, 195, 90);
+  transition: 400ms;
 }

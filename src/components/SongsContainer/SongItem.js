@@ -69,8 +69,8 @@ function SongItem({
       type={type}
       view={view}
     >
-      <p>{view}</p>
-      <p>{textForClass}</p>
+      {/* <p>{view}</p> */}
+      {/* <p>{textForClass}</p> */}
       <div className="songs-container left">
         <img src={image_url} alt={track_name} />
         <div className="songs-container song-text">
