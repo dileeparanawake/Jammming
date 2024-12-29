@@ -8,7 +8,7 @@
 - Users can see information about each song like title, artist, and album for songs they queried.
 - Users can export their custom playlist to their personal Spotify account.
 
-[![Demo](./assets/demo_image.png)](https://youtube.com/shorts/112AMuUWtKA)
+[![Demo](./src/assets/demo_image.png)](https://youtube.com/shorts/112AMuUWtKA)
 
 ## Prerequisites
 
